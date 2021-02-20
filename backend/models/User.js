@@ -22,6 +22,12 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  meetingEvents: [{
+    title: String, 
+    date: Date,
+    meetingParticipants: String,
+    location: String
+  }]
 });
 
 module.exports = User = mongoose.model("users", UserSchema);
